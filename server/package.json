@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon src/index.js",
+    "db:reset": "npx sequelize db:migrate:undo:all && sequelize db:migrate && sequelize db:seed:all",
     "test": "jest",
-    "coverage": "jest --coverage",
-    "dev": "nodemon index.js"
+    "coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
