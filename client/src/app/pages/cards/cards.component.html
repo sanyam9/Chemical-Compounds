@@ -1,0 +1,8 @@
+<section>
+  <app-card-item 
+    *ngFor="let compound of compounds" 
+    [compound]="compound"
+    (onDeleteCompound)="deleteCompound(compound)"
+    (onEditCompound)="editCompound(compound)"
+  ></app-card-item>
+</section>

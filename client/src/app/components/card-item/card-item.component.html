@@ -1,9 +1,8 @@
-<div class="card">
+<div class="card" [routerLink]="['/compound', compound.id]">
   <img src={{compound.compoundImage}}>
   <h2>{{ compound.compoundName }}</h2>
   <div class="card-footer">
-    <fa-icon [icon]="faTrashCan" class="icon" ></fa-icon>
-    <button class="btn">View Me!</button>
-    <fa-icon [icon]="faPenToSquare" class="icon" ></fa-icon>
+    <fa-icon [icon]="faTrashCan" class="icon" (click)="onDelete(compound)"></fa-icon>
+    <fa-icon [icon]="faPenToSquare" class="icon" (click)="onEdit(compound)"></fa-icon>
   </div>
 </div>

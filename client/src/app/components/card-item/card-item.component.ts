@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { faTrashCan, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { Compound } from 'src/app/types/compound';
 
@@ -9,13 +9,20 @@ import { Compound } from 'src/app/types/compound';
 })
 export class CardItemComponent {
   @Input () compound: Compound;
-
-  compoundName: string;
-  compoundImage: string;
-  compoundDescription: string;
-
+  @Output() onDeleteCompound: EventEmitter<Compound> = new EventEmitter();
+  @Output() onEditCompound: EventEmitter<Compound> = new EventEmitter();
+  
   faTrashCan = faTrashCan;
   faPenToSquare = faPenToSquare;
   
+  onDelete(compound: Compound) {
+    this.onDeleteCompound.emit(compound);
+    // console.log(compound)
+  }
+
+  onEdit(compound: Compound) {
+    // this.onEditCompound.emit(compound);
+    console.log(compound)
+  }
 
 }

@@ -1,0 +1,32 @@
+.compound-container {
+  display: flex ;
+  width: 80% ;
+  height: 400px ;
+  margin: 20px auto ;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #E6F7FF;
+}
+
+.compound-container img {
+  width: 50% ;
+  height: 100% ;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.compound-details {
+  width: 50% ;
+  height: 100% ;
+  padding: 10px 20px ;
+  display: flex ;
+  gap: 30px;
+  flex-direction: column ;
+  justify-content: space-between;
+}
+
+.compound-details h2 {
+  margin-top: 30px;
+  text-align: center;
+}
