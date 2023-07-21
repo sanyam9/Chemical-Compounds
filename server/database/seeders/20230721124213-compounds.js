@@ -8,7 +8,6 @@ const path = require('path');
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    // file is one level up 
     const filePath = path.join(__dirname, '..', 'compounds.json');
     const { compounds } = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     
