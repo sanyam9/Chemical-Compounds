@@ -11,13 +11,15 @@ import { CardsComponent } from './pages/cards/cards.component';
 import { CardItemComponent } from './components/card-item/card-item.component';
 import { CardDetailsComponent } from './pages/card-details/card-details.component';
 import { CompoundFormComponent } from './pages/compound-form/compound-form.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const appRoutes: Routes = [
-  { path: '', component: CardsComponent },
-  { path: 'compound/add', component: CompoundFormComponent },
+  { path: '', redirectTo: 'compounds', pathMatch: 'full' },
+  { path: 'compounds', component: CardsComponent },
+  { path: 'compound/add', component: CompoundFormComponent }, 
   { path: 'compound/:id', component: CardDetailsComponent },
   { path: 'compound/edit/:id', component: CompoundFormComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full'}
+  { path: '**', component:NotFoundComponent}
 ];
 
 @NgModule({
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
     CardsComponent,
     CardItemComponent,
     CardDetailsComponent,
-    CompoundFormComponent
+    CompoundFormComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

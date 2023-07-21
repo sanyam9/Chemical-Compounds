@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CompoundService } from '../../services/compound.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class CompoundFormComponent implements OnInit {
   image: string;
   operation: string = 'Add';
 
-  constructor(private route: ActivatedRoute, private compoundService: CompoundService) { }
+  constructor(private route: ActivatedRoute, private compoundService: CompoundService, private router: Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
@@ -24,7 +24,7 @@ export class CompoundFormComponent implements OnInit {
         this.description = compound.compoundDescription
         this.image = compound.compoundImage
         this.operation = 'Update';
-      });
+      }, error => this.router.navigate(['/404']));
     }
   }
 
@@ -42,13 +42,11 @@ export class CompoundFormComponent implements OnInit {
       };
       this.compoundService.addCompound(newCompound).subscribe(() => {
         alert('Compound added!');
-      });
+      }, error => alert(error.message));
       
       this.name = '';
       this.description = '';
       this.image = '';
-
-      
     }
     else {
       const updatedCompound = {
@@ -59,7 +57,7 @@ export class CompoundFormComponent implements OnInit {
       };
       this.compoundService.updateCompound(updatedCompound).subscribe(() => {
         alert('Compound updated!');
-      });
+      }, error => alert(error.message));
     }
   }
 }
