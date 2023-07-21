@@ -8,7 +8,7 @@ router.route('/compounds')
 
 router.route('/compounds/:id')
   .get(validateId, compoundsController.getCompoundById)
-  .put(validateId, validateCompound,compoundsController.updateCompoundById)
+  .put(validateId, validateCompound, compoundsController.updateCompoundById)
   .delete(validateId, compoundsController.deleteCompoundById);
 
 module.exports = router;
