@@ -15,9 +15,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Compound.init({
-    name: DataTypes.STRING,
-    image: DataTypes.STRING,
-    description: DataTypes.STRING
+    compoundName: DataTypes.STRING,
+    compoundImage: DataTypes.STRING,
+    compoundDescription: DataTypes.TEXT
   }, {
     sequelize,
     modelName: 'Compound',

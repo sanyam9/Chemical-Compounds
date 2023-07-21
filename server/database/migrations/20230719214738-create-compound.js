@@ -10,14 +10,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      compoundName: {
         type: Sequelize.STRING
       },
-      image: {
+      compoundImage: {
         type: Sequelize.STRING
       },
-      description: {
-        type: Sequelize.STRING
+      compoundDescription: {
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
@@ -29,6 +29,7 @@ module.exports = {
       }
     });
   },
+  // eslint-disable-next-line no-unused-vars
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Compounds');
   }
