@@ -1,0 +1,451 @@
+{
+	"info": {
+		"_postman_id": "74cb75fe-ef77-41af-9845-980e3342446c",
+		"name": "Compounds",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28678367"
+	},
+	"item": [
+		{
+			"name": "Get Compounds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/compounds?pg=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"compounds"
+					],
+					"query": [
+						{
+							"key": "pg",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Compounds",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/compounds?pg=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"compounds"
+							],
+							"query": [
+								{
+									"key": "pg",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1289"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"509-spE0oB1lA8pwPEJmzRpG1c/Kda0\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jul 2023 20:37:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 30,\n    \"rows\": [\n        {\n            \"id\": 1,\n            \"compoundName\": \"Ammonium\",\n            \"compoundImage\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Ammonium-2D.svg/1200px-Ammonium-2D.svg.png\",\n            \"compoundDescription\": \"The ammonium cation is a positively-charged polyatomic ion with the chemical formula NH+4or [NH4]+.\",\n            \"createdAt\": \"2023-07-21T20:37:00.000Z\",\n            \"updatedAt\": \"2023-07-21T20:37:00.000Z\"\n        },\n        {\n            \"id\": 2,\n            \"compoundName\": \"Methylammonium Iodide\",\n            \"compoundImage\": \"https://www.ossila.com/files/1/0823/0287/files/methyl-ammonium-iodide-structure_240x196.png\",\n            \"compoundDescription\": \"Methylammonium halides are organic halides with a formula of [CH3NH3]+X−, where X is Cl for methylammonium chloride, Br for methylammonium bromide, or I for methylammonium iodide. Generally they are white or light colored powders.\",\n            \"createdAt\": \"2023-07-21T20:37:00.000Z\",\n            \"updatedAt\": \"2023-07-21T20:37:00.000Z\"\n        },\n        {\n            \"id\": 3,\n            \"compoundName\": \"Hydroxide\",\n            \"compoundImage\": \"https://upload.wikimedia.org/wikipedia/commons/b/b0/Hydroxide_lone_pairs-2D.svg\",\n            \"compoundDescription\": \"Hydroxide is a diatomic anion with chemical formula OH−. It consists of an oxygen and hydrogen atom held together by a single covalent bond, and carries a negative electric charge.\",\n            \"createdAt\": \"2023-07-21T20:37:00.000Z\",\n            \"updatedAt\": \"2023-07-21T20:37:00.000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Compound by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/compounds/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"compounds",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Compound by Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/compounds/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"compounds",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "418"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a2-PkC61ryuCznJSacquJaGTR73HEk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jul 2023 20:37:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"compoundName\": \"Hydroxide\",\n    \"compoundImage\": \"https://upload.wikimedia.org/wikipedia/commons/b/b0/Hydroxide_lone_pairs-2D.svg\",\n    \"compoundDescription\": \"Hydroxide is a diatomic anion with chemical formula OH−. It consists of an oxygen and hydrogen atom held together by a single covalent bond, and carries a negative electric charge.\",\n    \"createdAt\": \"2023-07-21T20:37:00.000Z\",\n    \"updatedAt\": \"2023-07-21T20:37:00.000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add a compound",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"compoundName\": \"Methylammonium\",\r\n    \"compoundImage\": \"https://www.ossila.com/files/1/0823/0287/files/methyl-ammonium-iodide-structure_240x196.png\",\r\n    \"compoundDescription\": \"Methylammonium halides are organic halides with a formula of [CH3NH3]+X−, where X is Cl for methylammonium chloride, Br for methylammonium bromide, or I for methylammonium iodide. Generally they are white or light colored powders.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/compounds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"compounds"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add a compound",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"compoundName\": \"Methylammonium\",\r\n    \"compoundImage\": \"https://www.ossila.com/files/1/0823/0287/files/methyl-ammonium-iodide-structure_240x196.png\",\r\n    \"compoundDescription\": \"Methylammonium halides are organic halides with a formula of [CH3NH3]+X−, where X is Cl for methylammonium chloride, Br for methylammonium bromide, or I for methylammonium iodide. Generally they are white or light colored powders.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/compounds",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"compounds"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "486"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e6-zeTeQiZHGu+m6uJ77zrxO13unKQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jul 2023 20:37:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 31,\n    \"compoundName\": \"Methylammonium\",\n    \"compoundImage\": \"https://www.ossila.com/files/1/0823/0287/files/methyl-ammonium-iodide-structure_240x196.png\",\n    \"compoundDescription\": \"Methylammonium halides are organic halides with a formula of [CH3NH3]+X−, where X is Cl for methylammonium chloride, Br for methylammonium bromide, or I for methylammonium iodide. Generally they are white or light colored powders.\",\n    \"updatedAt\": \"2023-07-21T20:37:48.454Z\",\n    \"createdAt\": \"2023-07-21T20:37:48.454Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete a compound",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/compounds/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"compounds",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete a compound",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/compounds/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"compounds",
+								"3"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e-RTdU2yX5AksxCCF9oglXN3A+9ZQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jul 2023 20:37:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Update a compound",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"compoundName\": \"Methylammonium\",\r\n    \"compoundImage\": \"https://www.ossila.com/files/1/0823/0287/files/methyl-ammonium-iodide-structure_240x196.png\",\r\n    \"compoundDescription\": \"Methylammonium halides are organic halides with a formula of [CH3NH3]+X−, where X is Cl for methylammonium chloride, Br for methylammonium bromide, or I for methylammonium iodide. Generally they are white or light colored powders.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/compounds/19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"compounds",
+						"19"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update a compound",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"compoundName\": \"Methylammonium\",\r\n    \"compoundImage\": \"https://www.ossila.com/files/1/0823/0287/files/methyl-ammonium-iodide-structure_240x196.png\",\r\n    \"compoundDescription\": \"Methylammonium halides are organic halides with a formula of [CH3NH3]+X−, where X is Cl for methylammonium chloride, Br for methylammonium bromide, or I for methylammonium iodide. Generally they are white or light colored powders.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/compounds/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"compounds",
+								"19"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "486"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e6-CDqIXCVtvhoDz+Tw26xPJfXYk7Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jul 2023 20:38:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 19,\n    \"compoundName\": \"Methylammonium\",\n    \"compoundImage\": \"https://www.ossila.com/files/1/0823/0287/files/methyl-ammonium-iodide-structure_240x196.png\",\n    \"compoundDescription\": \"Methylammonium halides are organic halides with a formula of [CH3NH3]+X−, where X is Cl for methylammonium chloride, Br for methylammonium bromide, or I for methylammonium iodide. Generally they are white or light colored powders.\",\n    \"createdAt\": \"2023-07-21T20:37:00.000Z\",\n    \"updatedAt\": \"2023-07-21T20:38:05.000Z\"\n}"
+				}
+			]
+		}
+	]
+}
