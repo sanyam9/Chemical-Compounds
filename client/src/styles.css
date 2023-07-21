@@ -15,7 +15,7 @@ body {
   margin: 20px auto;
   overflow: auto;
   min-height: 500px;
-  border: 1px solid steelblue;
+  /* border: 1px solid steelblue; */
   padding: 10px;
   border-radius: 5px;
 }

@@ -2,7 +2,7 @@
   <img src={{compound.compoundImage}}>
   <h2>{{ compound.compoundName }}</h2>
   <div class="card-footer">
-    <fa-icon [icon]="faTrashCan" class="icon" (click)="onDelete(compound)"></fa-icon>
-    <fa-icon [icon]="faPenToSquare" class="icon" (click)="onEdit(compound)"></fa-icon>
+    <fa-icon [icon]="faTrashCan" class="icon" (click)="onDelete(compound); $event.stopPropagation()"></fa-icon>
+    <fa-icon [icon]="faPenToSquare" class="icon" [routerLink]="['/compound/edit',compound.id]"></fa-icon>
   </div>
 </div>

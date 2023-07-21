@@ -35,5 +35,9 @@ export class CompoundService {
     const url = `${this.apiUrl}/${compound.id}`;
     return this.http.put<Compound>(url, compound, httpOptions);
   };
-  
+
+  addCompound(compound: Compound): Observable<Compound> {
+    console.log(compound);
+    return this.http.post<Compound>(this.apiUrl, compound, httpOptions);
+  }
 };

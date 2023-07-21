@@ -17,12 +17,5 @@ export class CardItemComponent {
   
   onDelete(compound: Compound) {
     this.onDeleteCompound.emit(compound);
-    // console.log(compound)
   }
-
-  onEdit(compound: Compound) {
-    // this.onEditCompound.emit(compound);
-    console.log(compound)
-  }
-
 }

@@ -1,0 +1,27 @@
+.form {
+  margin-bottom: 40px;
+  width: 60%;
+  padding: 20px;
+  margin: 10px auto ;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.form h3 {
+  text-align: center;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input , .form-control textarea {
+  width: 100%;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
