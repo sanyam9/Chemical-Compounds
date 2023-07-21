@@ -1,7 +1,11 @@
 const db = require('../models');
 
-const getAllCompounds = async () => {
-  return await db.Compound.findAll();
+const getAllCompounds = async (offset, limit) => {
+  return await db.Compound.findAndCountAll({
+    offset,
+    limit,
+    order: [['id', 'ASC']],
+  });
 };
 
 const getCompoundById = async (id) => {
@@ -13,7 +17,7 @@ const createCompound = async (compound) => {
 };
 
 const updateCompound = async (id, compound) => {
-  return await db.Compound.update(compound, { where: { id }, returning: true });
+  return await db.Compound.update(compound, { where: { id }, returning: true, plain: true});
 };
 
 const deleteCompound = async (id) => {
