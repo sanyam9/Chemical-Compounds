@@ -15,9 +15,9 @@ body {
   margin: 20px auto;
   overflow: auto;
   min-height: 500px;
-  /* border: 1px solid steelblue; */
   padding: 10px;
   border-radius: 5px;
+  background-color: #F8F3D3
 }
 
 .btn {

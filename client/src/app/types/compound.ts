@@ -4,3 +4,8 @@ export interface Compound {
   compoundDescription: string;
   compoundImage: string;
 };
+
+export interface CompoundResponse {
+  count: number;
+  rows: Compound[];
+};

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Compound } from '../types/compound';
+import { Compound, CompoundResponse } from '../types/compound';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,12 +13,12 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class CompoundService {
-  private apiUrl = 'http://localhost:5000/compounds';
+  private apiUrl = 'http://localhost:3000/api/compounds';
 
   constructor(private http:HttpClient) { }
 
-  getCompounds(): Observable<Compound[]> {
-    return this.http.get<Compound[]>(this.apiUrl);
+  getCompounds(page): Observable<CompoundResponse> {
+    return this.http.get<CompoundResponse>(this.apiUrl + '?pg=' + page);
   };
 
   getCompoundById(id: string): Observable<Compound> {
