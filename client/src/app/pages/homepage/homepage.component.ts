@@ -4,11 +4,11 @@ import { CompoundService } from '../../services/compound.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-cards',
-  templateUrl: './cards.component.html',
-  styleUrls: ['./cards.component.css']
+  selector: 'app-homepage',
+  templateUrl: './homepage.component.html',
+  styleUrls: ['./homepage.component.css']
 })
-export class CardsComponent implements OnInit{
+export class HomepageComponent implements OnInit{
   compounds: Compound[];
   page: number;
   totalCompounds: number;

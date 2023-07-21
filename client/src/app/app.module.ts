@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { CardsComponent } from './pages/cards/cards.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CardItemComponent } from './components/card-item/card-item.component';
 import { CardDetailsComponent } from './pages/card-details/card-details.component';
 import { CompoundFormComponent } from './pages/compound-form/compound-form.component';
@@ -15,7 +15,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'compounds', pathMatch: 'full' },
-  { path: 'compounds', component: CardsComponent },
+  { path: 'compounds', component: HomepageComponent },
   { path: 'compound/add', component: CompoundFormComponent }, 
   { path: 'compound/:id', component: CardDetailsComponent },
   { path: 'compound/edit/:id', component: CompoundFormComponent },
@@ -26,7 +26,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    CardsComponent,
+    HomepageComponent,
     CardItemComponent,
     CardDetailsComponent,
     CompoundFormComponent,
