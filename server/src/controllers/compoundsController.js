@@ -68,10 +68,20 @@ const deleteCompoundById = async (req, res) => {
   }
 };
 
+const upsertCompounds = async (req, res) => {
+  try { 
+    const upsertedCompounds = await compoundsServices.upsertCompounds(req.body);
+    res.status(200).json(upsertedCompounds);
+  }
+  catch (error){
+    res.status(500).json({ message: error.message });
+  }
+};
 module.exports = {
   getAllCompounds,
   getCompoundById,
   addCompound,
   updateCompoundById,
-  deleteCompoundById
+  deleteCompoundById,
+  upsertCompounds
 };

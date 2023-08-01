@@ -50,10 +50,20 @@ const deleteCompound = async (id) => {
   }
 };
 
+const upsertCompounds = async (compounds) => {
+  try{
+    return await db.Compound.bulkCreate(compounds, { updateOnDuplicate : ['id']});
+  }
+  catch(err) {
+    throw new Error(err);
+  }
+};
+
 module.exports = {
   getAllCompounds,
   getCompoundById,
   createCompound,
   updateCompound,
   deleteCompound,
+  upsertCompounds
 };

@@ -4,7 +4,8 @@ const { validateCompound, validateQuery, validateId } = require('../middlewares/
 
 router.route('/compounds')
   .get(validateQuery, compoundsController.getAllCompounds)
-  .post(validateCompound,compoundsController.addCompound);
+  .post(validateCompound,compoundsController.addCompound)
+  .put(compoundsController.upsertCompounds);
 
 router.route('/compounds/:id')
   .get(validateId, compoundsController.getCompoundById)
