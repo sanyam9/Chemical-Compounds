@@ -1,0 +1,42 @@
+services:
+  mysql:
+    container_name: database
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: compounds
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 5s
+    ports:
+      - 3306:3306
+  
+  server:
+    container_name: server
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./server/:/app
+    environment:
+      - PORT=3000
+    ports:
+      - 3000:3000
+    depends_on:
+      mysql:
+        condition: service_healthy
+    command: sh -c "npm install && npm run db:reset && npm run start"
+  
+  client:
+    container_name: client  
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./client/:/app
+    entrypoint: ["npm", "run", "start"]
+    ports:
+      - 4200:4200
+    depends_on:
+      - server
